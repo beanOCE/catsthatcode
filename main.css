@@ -6,6 +6,12 @@
 *  Maeve Kelly
    Ben Waghorn */
 
+/* COLOUR PALETTE
+*  #0E0B16
+*  #A239CA
+*  #4717F6
+   #E7DFDD */
+
 header {
     display: block;
     margin: auto;
@@ -14,7 +20,7 @@ header {
 }
 
 h1 {
-    color: cornflowerblue;
+    color: rgb(231, 221, 253);
     font-family: Roboto;
     text-decoration: underline;
 }
@@ -29,11 +35,12 @@ nav {
 a {
     text-decoration: none;
     margin: 5px;
-    color: black;
+    color: rgb(231, 221, 253);
 }
 
 form {
     margin: auto;
     text-align: center;
     width: 250px;
+    color: rgb(231, 221, 253);
 }
