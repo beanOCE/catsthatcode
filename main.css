@@ -26,10 +26,16 @@ h1 {
 }
 
 nav {
+    padding: 1%;
     text-decoration: none;
     font-family: Roboto;
     margin: 10px;
     margin-bottom: 10px;
+    background-color: rgb(162, 57, 202);
+    border-radius: 10px;
+    margin-left: 29%;
+    margin-right: 29%;
+    font-weight: 700;
 }
 
 a {
@@ -43,4 +49,17 @@ form {
     text-align: center;
     width: 250px;
     color: rgb(231, 221, 253);
+    font-family: Roboto;
+    margin-top: 20px;
 }
+
+.lorem p {
+    font-family: Roboto;
+    color:rgb(231, 221, 253);
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 300;
+}
+
+
