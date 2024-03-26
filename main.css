@@ -23,6 +23,7 @@ nav {
     text-decoration: none;
     font-family: Roboto;
     margin: 10px;
+    margin-bottom: 10px;
 }
 
 a {
@@ -32,7 +33,6 @@ a {
 }
 
 form {
-    margin-top: 10px;
     margin: auto;
     text-align: center;
     width: 250px;

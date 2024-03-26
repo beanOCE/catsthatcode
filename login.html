@@ -24,19 +24,19 @@
     </header>
 
     <div id="form" class="center">
-        <form>
-            <label for="username">Username</label>
+        <!--- This will break when we add POST to the form -->
+        <form id="login" action="index.html">
+            <label for="username">Username:</label>
             <input type="text" name="user" id="user" required />
             <br>
             <br>
-            <label for="password">Password</label>
-            <input type="password" name="pass" id="pass" required />
+            <label for="password">Password:</label>
+            <input type="password" name="pass" id="pass" minlength="8" required />
             <br>
             <br>
             <input type="submit" name="Login" value="Login" />
         </form>
     </div>
-
 
 </body>
 
