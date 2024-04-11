@@ -10,7 +10,8 @@
 *  #0E0B16
 *  #A239CA
 *  #4717F6
-   #E7DFDD */
+   #E7DFDD
+   #979797 */
 
 header {
     display: block;
@@ -29,9 +30,10 @@ h2 {
     color: rgb(231, 221, 253);
     font-family: Roboto;
     background-color: rgb(162, 57, 202);
-    border-radius: px;
+    border-radius: 10px;
     text-decoration: none;
     margin-left: auto;
+    padding-left: 5px;
 }
 
 nav {
@@ -51,10 +53,12 @@ a {
     text-decoration: none;
     margin: 5px;
     color: rgb(231, 221, 253);
+    font-family: Roboto;
 }
 
 p {
     color:  rgb(231, 221, 253);;
+    font-family: Roboto;
 }
 
 ul {
@@ -68,6 +72,10 @@ form {
     color: rgb(231, 221, 253);
     font-family: Roboto;
     margin-top: 20px;
+}
+
+li {
+    font-family: Roboto;
 }
 
 #create-form {
@@ -106,4 +114,56 @@ form {
     padding: 10px;
     background-color: rgb(162, 57, 202);
     color:rgb(231, 221, 253);
+}
+
+.align {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.post {
+    font-family: Roboto;
+    color:rgb(231, 221, 253);
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.post h3 {
+    text-align: left;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.post h6 {
+    text-align: left;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #A239CA;
+}
+
+.post p {
+    margin-bottom: 50px;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.post h4 {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #979797;
+}
+
+.align p {
+    padding-left: 5px;
 }
