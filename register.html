@@ -7,14 +7,15 @@
     <meta name="author" content="Ben Waghorn, Eliza Gurney, Maeve Kelly">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <title>Login</title>
+    <title>Registration</title>
     <script src="passwordManagement.js"></script>
+
 </head>
 
 <body style="background-color: #0E0B16;">
     <header>
         <img src="images/icon.png" class="center" width="50%" height="50%">
-        <h1>Login Page</h1>
+        <h1>Registration Page</h1>
         <nav>
             <a href="index.html">Home</a>
             <a href="create.html">Create</a>
@@ -25,10 +26,13 @@
     </header>
 
     <div id="form" class="center">
-        <!--- This will break when we add POST to the form -->
         <form id="login" action="index.html" novalidate>
             <label for="username">Username:</label>
             <input type="text" name="user" id="user" required />
+            <br>
+            <br>
+            <label for="email">Email address:</label>
+            <input type="text" name="address" id="address" required />
             <br>
             <br>
             <label for="password">Password:</label>
@@ -36,8 +40,12 @@
             <input type="checkbox" onclick="togglePassword()">Show
             <br>
             <br>
-            <input type="submit" name="Login" value="Login" />
-            <input type="button" value="Register" onclick="window.location.href='register.html'" />
+            <label for="ConfirmPass">Confirm password:</label>
+            <input type="password" name="confirm" id="confirm" minlength="8" required />
+            <br>
+            <br>
+            <input type="submit" name="Register" value="Register" />
+            <input type="button" id="reset-btn" name="Reset" value="Reset" />
         </form>
     </div>
 
