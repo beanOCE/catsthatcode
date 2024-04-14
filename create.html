@@ -7,6 +7,7 @@
     <meta name="author" content="Ben Waghorn, Eliza Gurney, Maeve Kelly">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="js/validation.js" defer></script>
     <title>Create — Cats that Code</title>
 </head>
 
@@ -22,23 +23,26 @@
             <a href="login.html">Login</a>
         </nav>
     </header>
+    <div>
+        <form id = "create-form" novalidate>
+            <label class = "form-label">Title</label>
+            <textarea type = "text" class = "form-control" name = "Title" id = "title"></textarea>
+            <span id = "title_error" class="error"></span>
 
-    <form id = "create-form">
-        <label class = "form-label">Title</label>
-        <input type = "text" class = "form-control" name = "Title" required>
+            <label class = "form-label">Tags/Keywords</label>
+            <textarea type = "text" class = "form-control" name = "Tags/Keywords" id = "tags"></textarea>
+            <span id = "tags" class="error"></span>
 
-        <label class = "form-label">Tags/Keywords</label>
-        <input type = "text" class = "form-control" name = "Tags/Keywords" required>
-
-        <label class = "form-label">Content</label>
-        <input type = "text" class = "form-control-content" name = "Content" maxlength="80" required>
-
-        <div>
-            <button class = "btn" id = "create">Create</button>
-            <button class = "btn" id = "reset">Reset</button>
-        </div>
-
-    </form>
+            <label class = "form-label">Content</label>
+            <textarea type = "text" class = "form-control" name = "Content" id = "content"></textarea>
+            <span id = "content_error" class="error"></span>
+            
+            <div>
+                <button class = "btn" id = "create" onclick="create()">Create</button>
+                <button class = "btn" id = "reset" onclick="reset()">Reset</button>
+            </div>
+        </form>
+    </div>
 
 </body>
 

@@ -90,14 +90,23 @@ li {
     margin: 10px;
 }
 
-.form-control-content {
-    width: 300px;
+#title {
+    height: 50px;
+}
+
+#tags {
+    height: 100px;
+}
+
+#content {
     height: 200px;
 }
 
 .form-control {
     margin-bottom: 20px;
     height: 30px;
+    width: 300px;
+    font-family: Roboto;
 }
 
 .lorem p {
@@ -166,4 +175,8 @@ li {
 
 .align p {
     padding-left: 5px;
+}
+
+.error {
+    color: red;
 }
