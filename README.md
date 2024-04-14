@@ -1,4 +1,4 @@
-# KIT202 Assignment 1
+# KIT202 Project - Cats that Code!
 
 ## Ben, Maeve, and Eliza's epic cat coding blog!
 
