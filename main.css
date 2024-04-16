@@ -59,7 +59,7 @@ nav {
     width: 350px;
 }
 
-a {
+nav a {
     text-decoration: none;
     margin: 5px;
     color: rgb(231, 221, 253);
@@ -249,9 +249,11 @@ footer {
 
 .sticky {
     position: fixed;
+    left: 0;
+    right: 0;
     top: 0;
     width: 100%;
-    align-items: right;
+    align-items: center;
     margin: 0px;
 }
 
@@ -293,4 +295,14 @@ footer {
     transform: scaleX(0);
     transform-origin: left;
     animation-delay: 0.8s;
+}
+
+.ref {
+    margin-bottom: 25px;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+a {
+    text-decoration: none;
 }
