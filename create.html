@@ -7,8 +7,8 @@
     <meta name="author" content="Ben Waghorn, Eliza Gurney, Maeve Kelly">
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <script src="js/validation.js" defer></script>
     <title>Create — Cats that Code</title>
+    <script src="js/validation.js" defer></script>
     <script src="js/backToTop.js" defer></script>
     <script src="js/toggleMode.js" defer></script>
 </head>
@@ -25,7 +25,7 @@
             <a href="login.html">Login</a>
         </nav>
     </header>
-    <div>
+    <div id = "form">
         <form id = "create-form" novalidate>
             <label class = "form-label">Title</label>
             <textarea type = "text" class = "form-control" name = "Title" id = "title"></textarea>
@@ -33,15 +33,15 @@
 
             <label class = "form-label">Tags/Keywords</label>
             <textarea type = "text" class = "form-control" name = "Tags/Keywords" id = "tags"></textarea>
-            <span id = "tags" class="error"></span>
+            <span id = "tags_error" class="error"> </span>
 
             <label class = "form-label">Content</label>
             <textarea type = "text" class = "form-control" name = "Content" id = "content"></textarea>
-            <span id = "content_error" class="error"></span>
+            <span id = "content_error" class="error"> </span>
             
             <div>
-                <button class = "btn" id = "create" onclick="create()">Create</button>
-                <button class = "btn" id = "reset" onclick="reset()">Reset</button>
+                <button class = "btn" id = "create">Create</button>
+                <button class = "btn" id = "reset">Reset</button>
             </div>
         </form>
     </div>
