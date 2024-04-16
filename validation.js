@@ -1,6 +1,4 @@
 
-
-
 window.onload = function () {
     const createForm = document.getElementById('create-form');
     const createBtn = document.getElementById('create');
@@ -8,7 +6,6 @@ window.onload = function () {
 
     if (createForm) {
         createBtn.addEventListener('click', function(event) {
-            alert("1TEST");
             event.preventDefault();
             const title = document.getElementById('title');
             const tags = document.getElementById('tags');
@@ -18,6 +15,7 @@ window.onload = function () {
                 event.preventDefault();
                 document.getElementById("title_error").innerHTML = "This is a required field";
             } else {
+                event.preventDefault();
                 document.getElementById("title_error").innerHTML = "";
             }
                 
@@ -25,18 +23,18 @@ window.onload = function () {
                 event.preventDefault();
                 document.getElementById("tags_error").innerHTML = "This is a required field";
             } else {
+                event.preventDefault();
                 document.getElementById("tags_error").innerHTML = "";
             }
                 
             if (content.value == '') {
-                alert("v");
                 event.preventDefault();
                 document.getElementById("content_error").innerHTML = "This is a required field";
             } else if (content.value.length > 80){ 
-                alert("TEST");
                 event.preventDefault();
                 document.getElementById("content_error").innerHTML = "Content must be less than 80 characters";
             } else {
+                event.preventDefault();
                 document.getElementById("content_error").innerHTML = "";
             }
 
