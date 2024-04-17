@@ -8,7 +8,6 @@ window.onload = function () {
 
     if (createForm) {
         createBtn.addEventListener('click', function(event) {
-            alert("1TEST");
             event.preventDefault();
             const title = document.getElementById('title');
             const tags = document.getElementById('tags');
@@ -29,11 +28,9 @@ window.onload = function () {
             }
                 
             if (content.value == '') {
-                alert("v");
                 event.preventDefault();
                 document.getElementById("content_error").innerHTML = "This is a required field";
             } else if (content.value.length > 80){ 
-                alert("TEST");
                 event.preventDefault();
                 document.getElementById("content_error").innerHTML = "Content must be less than 80 characters";
             } else {
