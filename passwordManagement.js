@@ -26,10 +26,16 @@ window.onload = function () {
             var email = document.getElementById('address').value;
             var password = document.getElementById('pass').value;
             var confirmPassword = document.getElementById('confirm').value;
+            var passwordRequirements = "Password must be at least 8 characters long and contain at least one number, one capital letter, and one special character.";
+            var missingRequirements = "";
+
 
             if (username.trim() === '') {
                 event.preventDefault();
                 document.getElementById("newusername_error").innerHTML = 'Please enter a username.';
+            } else {
+                event.preventDefault();
+                document.getElementById("newusername_error").innerHTML = '';  
             }
 
             if (email.trim() === '') {
@@ -38,26 +44,15 @@ window.onload = function () {
             } else if (!validateEmail(email)) {
                 event.preventDefault();
                 document.getElementById("email_error").innerHTML = 'Please enter a valid email address.';
+            } else {
+                event.preventDefault();
+                document.getElementById("email_error").innerHTML = '';
             }
 
             if (password.trim() === '') {
                 event.preventDefault();
                 document.getElementById("newpassword_error").innerHTML = 'Please enter a password.';
-            }
-
-            if (confirmPassword.trim() === '') {
-                event.preventDefault();
-                document.getElementById("confpassword_error").innerHTML = 'Please confirm password.';
-            } else if (password !== confirmPassword) {
-                event.preventDefault();
-                document.getElementById("confpassword_error").innerHTML = 'Passwords do not match.';
-            }
-
-
-            var passwordRequirements = "Password must be at least 8 characters long and contain at least one number, one capital letter, and one special character.";
-            var missingRequirements = "";
-
-            if (!validatePassword(password)) {
+            } else if (!validatePassword(password)) {
                 if (password.length < 8) {
                     missingRequirements += "At least 8 characters, ";
                 }
@@ -72,6 +67,20 @@ window.onload = function () {
                 }
 
                 document.getElementById("newpassword_error").innerHTML = (passwordRequirements + "\n\nMissing requirements: " + missingRequirements);
+            } else {
+                event.preventDefault();
+                document.getElementById("newpassword_error").innerHTML = '';
+            }
+
+            if (confirmPassword.trim() === '') {
+                event.preventDefault();
+                document.getElementById("confpassword_error").innerHTML = 'Please confirm password.';
+            } else if (password !== confirmPassword) {
+                event.preventDefault();
+                document.getElementById("confpassword_error").innerHTML = 'Passwords do not match.';
+            } else {
+                    event.preventDefault();
+                    document.getElementById("confpassword_error").innerHTML = '';
             }
         });
 
@@ -98,14 +107,20 @@ window.onload = function () {
             if (username.trim() === '') {
                 event.preventDefault();
                 document.getElementById("username_error").innerHTML = 'Please enter a valid username';
+            } else {
+                event.preventDefault();
+                document.getElementById("username_error").innerHTML = '';
             }
-
+            
             if (password.trim() === '') {
                 event.preventDefault();
                 document.getElementById("password_error").innerHTML = 'Please enter a password';
             } else if (!validatePassword(password)) {
                 event.preventDefault();
-                document.getElementById("password_error").innerHTML = 'Please enter a valid username';
+                document.getElementById("password_error").innerHTML = 'Please enter a valid password';
+            } else {
+                event.preventDefault();
+                document.getElementById("password_error").innerHTML = '';
             }
         });
     }
