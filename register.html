@@ -22,30 +22,38 @@
             <a href="create.html">Create</a>
             <a href="about.html">About</a>
             <a href="archive.html">Archive</a>
-            <a href="login.html">Login</a>
+            <a href="login.html" class="current">Login</a>
         </nav>
     </header>
 
     <div id="form" class="center">
         <form id="registerForm" action="index.html" novalidate>
-            <label for="username">Username:</label>
-            <input type="text" name="user" id="user" required />
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" name="user" id="user" required />
+            </div>
             <span id = "newusername_error" class="error"> </span>
             <br>
             <br>
-            <label for="email">Email address:</label>
-            <input type="text" name="address" id="address" required />
+            <div>
+                <label for="email">Email address:</label>
+                <input type="text" name="address" id="address" required />
+            </div>
             <span id = "email_error" class="error"> </span>
             <br>
             <br>
-            <label for="password">Password:</label>
-            <input type="password" name="pass" id="pass" minlength="8" required />
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="pass" id="pass" minlength="8" required />
+            </div>
             <input type="checkbox" onclick="togglePassword()">Show
             <span id = "newpassword_error" class="error"> </span>
             <br>
             <br>
-            <label for="ConfirmPass">Confirm password:</label>
-            <input type="password" name="confirm" id="confirm" minlength="8" required />
+            <div>
+                <label for="ConfirmPass">Confirm password:</label>
+                <input type="password" name="confirm" id="confirm" minlength="8" required />
+            </div>
             <span id = "confpassword_error" class="error"> </span>
             <br>
             <br>

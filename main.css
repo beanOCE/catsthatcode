@@ -23,11 +23,20 @@ body {
     color: #0E0B16;
 }
 
+.current {
+    color: rgb(231, 165, 164);
+}
+
 header {
     display: block;
     margin: auto;
     width: 40%;
-    text-align: center;    
+    text-align: center;
+    align-items: center;    
+}
+
+header nav a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -127,6 +136,7 @@ footer {
     margin-bottom: 20px;
     height: 30px;
     width: 300px;
+    font-family: Roboto;
 }
 
 .lorem p {
@@ -157,7 +167,7 @@ footer {
 }
 
 #content {
-    height: 200px;
+    height: 300px;
 }
 
 .align {
@@ -267,5 +277,16 @@ a {
     }
     to {
         transform: scaleX(1);
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        margin: auto;
+    }
+
+    header {
+        border-radius: 0;
+        max-width: 700px;
     }
 }
