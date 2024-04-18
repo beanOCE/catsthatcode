@@ -49,3 +49,16 @@ function showPost4() {
     revealBtn.innerHTML = "Show Post";
   }
 }
+
+function showPost5() {
+  const revealBtn = document.getElementById("reveal5");
+  const revealPost = document.getElementById("archive5");
+
+  if (revealPost.style.display === "none") {
+    revealPost.style.display = "block";
+    revealBtn.innerHTML = "Hide Post";
+  } else {
+    revealPost.style.display = "none";
+    revealBtn.innerHTML = "Show Post";
+  }
+}
