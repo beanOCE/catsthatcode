@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ben Waghorn, Eliza Gurney, Maeve Kelly">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Registration</title>
+    <script src="js/passwordManagement.js" defer></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/toggleMode.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/icon.png" id="iconImg" class="center" width="50%" height="50%">
+        <h1>Registration Page</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="create.html">Create</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Archive</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <div id="form" class="center">
+        <form id="registerForm" action="index.html" novalidate>
+            <label for="username">Username:</label>
+            <input type="text" name="user" id="username" required />
+            <br>
+            <br>
+            <label for="email">Email address:</label>
+            <input type="text" name="address" id="address" required />
+            <br>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="pass" id="password" minlength="8" required />
+            <input type="checkbox" onclick="togglePassword()">Show
+            <br>
+            <br>
+            <label for="ConfirmPass">Confirm password:</label>
+            <input type="password" name="confirm" id="ConfirmPass" minlength="8" required />
+            <br><br>
+            <div class="button-container">
+                <input type="submit" name="Register" value="Register" class="btn" />
+                <input type="button" id="reset-btn" class="btn" name="Reset" value="Reset" />
+            </div>
+        </form>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
+    <button onclick="toggleMode()" id="modeBtn" title="Toggle light mode">Toggle light mode</button>
+
+    <footer><i>Ben Waghorn, Maeve Kelly and Eliza Gurney | KIT202 2024</i></footer>
+
+</body>
+
+</html>

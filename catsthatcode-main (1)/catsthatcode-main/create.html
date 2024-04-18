@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ben Waghorn, Eliza Gurney, Maeve Kelly">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Create — Cats that Code</title>
+    <script src="js/validation.js" defer></script>
+    <script src="js/backToTop.js" defer></script>
+    <script src="js/toggleMode.js" defer></script>
+    <script src="js/stickynav.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/icon.png" id="iconImg" class="center" width="50%" height="50%">
+        <h1>Create Page</h1>
+        <nav id = "navbar">
+            <a href="index.html">Home</a>
+            <a href="create.html">Create</a>
+            <a href="about.html">About</a>
+            <a href="archive.html">Archive</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div id = "form">
+        <form id = "create-form" novalidate>
+            <label class = "form-label">Title</label>
+            <textarea type = "text" class = "form-control" name = "Title" id = "title"></textarea>
+            <span id = "title_error" class="error"> </span>
+
+            <label class = "form-label">Tags/Keywords</label>
+            <textarea type = "text" class = "form-control" name = "Tags/Keywords" id = "tags"></textarea>
+            <span id = "tags_error" class="error"> </span>
+
+            <label class = "form-label">Content</label>
+            <textarea type = "text" class = "form-control" name = "Content" id = "content"></textarea>
+            <span id = "content_error" class="error"> </span>
+            
+            <div class="button-container">
+                <button class = "btn" id = "create">Create</button>
+                <button class = "btn" id = "reset">Reset</button>
+            </div>
+        </form>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to top</button>
+
+    <button onclick="toggleMode()" id="modeBtn" title="Toggle light mode">Toggle light mode</button>
+
+    <footer><i>Ben Waghorn, Maeve Kelly and Eliza Gurney | KIT202 2024</i></footer>
+
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+/* We can add fonts and stuff up here using @import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Authors
+*  Eliza Gurney
+*  Maeve Kelly
+   Ben Waghorn */
+
+/* COLOUR PALETTE
+*  #0E0B16
+*  #A239CA
+*  #4717F6
+   #E7DFDD
+   #979797 */
+   body {
+    background-color: #0E0B16;
+    color: rgb(231, 221, 253);
+    font-family: Roboto, sans-serif;
+}
+
+.light-mode {
+    background-color: rgb(231, 221, 253);
+    color: #0E0B16;
+}
+
+header {
+    
+    text-align: center;
+}
+
+#iconImg {
+    width: 25%; 
+    height: 25%; 
+    margin: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+h2 {
+    font-size: 1.5rem;
+    background-color: rgb(162, 57, 202);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+nav {
+    padding: 10px;
+    background-color: rgb(162, 57, 202);
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+nav a {
+    margin: 5px;
+    color: rgb(231, 221, 253);
+}
+
+p {
+    font-size: 1rem;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+footer {
+    padding: 10px;
+    margin-top: 50px;
+    background-color: rgb(162, 57, 202);
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: auto;
+    color: rgb(231, 221, 253);
+}
+
+#create-form {
+    display: grid;
+    grid-column: auto 200px;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+#myBtn,#modeBtn {
+    position: fixed; 
+    bottom: 20px; 
+    z-index: 99; 
+    border: none; 
+    outline: none; 
+    background-color: #A239CA; 
+    color: white; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 10px; 
+    font-size: 18px;
+    font-family: Roboto;
+  }
+
+  #myBtn {
+    display: none;
+    position: none; 
+    right: 30px; 
+  }
+
+  #modeBtn {
+    position: fixed; 
+    left: 30px; 
+  }
+
+  #myBtn:hover, #modeBtn:hover {
+    background-color: #979797;
+}
+
+
+.form-label {
+    margin: 10px;
+}
+
+.btn {
+    padding: 10px;
+    background-color: rgb(162, 57, 202);
+    color: rgb(231, 221, 253);
+}
+
+.btn:hover {
+    background-color: rgb(181, 105, 211);
+}
+
+.align {
+    margin-left: 15%;
+    margin-right: 15%;}
+
+.post {
+    font-family: Roboto;
+    text-align: left;
+    margin-left: 15%;
+    margin-right: 15%;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.error {
+    color: red;
+    margin-bottom: 50px;
+}
+.post h3 {
+    text-align: left;
+    font-size: 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.post h6 {
+    text-align: left;
+    font-size: 17px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 400;
+    color: #A239CA;
+}
+
+.post p {
+    margin-bottom: 50px;
+    font-size: 17px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.post h4 {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #979797;
+}
+
+
+@keyframes fade-in-right{
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes grow-left {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
+.post h3, h4, h6, p {
+    opacity: 0;
+    animation: fade-in-right 0.6s ease forwards;
+}
+
+.post h4, h6 {
+    animation-delay: 0.4s;
+}
+
+.post p {
+    transform: scaleX(0);
+    transform-origin: left;
+    animation-delay: 0.8s;
+}
+
+.ref {
+    margin-bottom: 25px;
+    text-decoration: none;
+    font-family: Roboto;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
