@@ -14,24 +14,20 @@ window.onload = function () {
             const content = document.getElementById('content');
             
             if (title.value == '') {
-                event.preventDefault();
                 document.getElementById("title_error").innerHTML = "This is a required field";
             } else {
                 document.getElementById("title_error").innerHTML = "";
             }
                 
             if (tags.value == '') {
-                event.preventDefault();
                 document.getElementById("tags_error").innerHTML = "This is a required field";
             } else {
                 document.getElementById("tags_error").innerHTML = "";
             }
                 
             if (content.value == '') {
-                event.preventDefault();
                 document.getElementById("content_error").innerHTML = "This is a required field";
             } else if (content.value.length > 80){ 
-                event.preventDefault();
                 document.getElementById("content_error").innerHTML = "Content must be less than 80 characters";
             } else {
                 document.getElementById("content_error").innerHTML = "";
