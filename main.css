@@ -227,7 +227,7 @@ footer {
     animation-delay: 0.8s;
 }
 
-#archive {
+.archive {
     display: none;
 }
 
