@@ -15,6 +15,8 @@ window.onload = function () {
             
             if (title.value == '') {
                 document.getElementById("title_error").innerHTML = "This is a required field";
+            } else if (title.value.length > 80){ 
+                    document.getElementById("title_error").innerHTML = "Title must be less than 80 characters";
             } else {
                 document.getElementById("title_error").innerHTML = "";
             }
@@ -27,15 +29,13 @@ window.onload = function () {
                 
             if (content.value == '') {
                 document.getElementById("content_error").innerHTML = "This is a required field";
-            } else if (content.value.length > 80){ 
-                document.getElementById("content_error").innerHTML = "Content must be less than 80 characters";
             } else {
                 document.getElementById("content_error").innerHTML = "";
             }
 
 
             if ((title.value != '' && tags.value != '' && content.value != '')){
-                //create
+                window.location.href = "index.html";
             }
         });
 

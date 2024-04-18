@@ -65,7 +65,6 @@ window.onload = function () {
                 if (!/(?=.*\W)/.test(password)) {
                     missingRequirements += "At least one special character, ";
                 }
-
                 document.getElementById("newpassword_error").innerHTML = (passwordRequirements + "\n\nMissing requirements: " + missingRequirements);
             } else {
                 event.preventDefault();
@@ -82,6 +81,11 @@ window.onload = function () {
                     event.preventDefault();
                     document.getElementById("confpassword_error").innerHTML = '';
             }
+
+            if (username.trim() != '' && email.trim() != '' && validateEmail(email) && password.trim() != '' && validatePassword(password) && confirmPassword.trim() != ''){
+                window.location.href = "index.html";
+            }
+
         });
 
         document.getElementById('reset-btn').addEventListener('click', function () {
@@ -122,6 +126,11 @@ window.onload = function () {
                 event.preventDefault();
                 document.getElementById("password_error").innerHTML = '';
             }
+
+            if (username.trim() != '' && password.trim != '' && validatePassword(password)) {
+                window.location.href = "index.html";
+            }
+
         });
     }
 };
