@@ -156,6 +156,15 @@ footer {
     font-size: 15px; 
 }
 
+.btn2 {
+    padding: 10px;
+    background-color: rgb(162, 57, 202);
+    color:rgb(231, 221, 253);
+    border-radius: 10px; 
+    font-size: 15px; 
+    margin-bottom: 50px;
+}
+
 .btn:hover{
     background-color: rgb(181, 105, 211);
 }
@@ -210,11 +219,9 @@ footer {
 }
 
 .post p {
-    margin-bottom: 50px;
     font-size: 17px;
     font-weight: 300;
     margin-top: 7px;
-
     transform: scaleX(0);
     transform-origin: left;
     animation-delay: 0.8s;
