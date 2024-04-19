@@ -1,19 +1,17 @@
 function toggleMode() {
     var element = document.body;
     var imgElement = document.getElementById("iconImg");
-    var button = document.getElementById("modeBtn")
-
+    var modeBtn = document.getElementById("modeBtn");
             element.classList.toggle("light-mode");
             
             if (element.classList.contains("light-mode")) {
                 imgElement.src = "images/icon2.png";
                 localStorage.setItem("mode", "light");
-                button.innerHTML = "Toggle Dark Mode"
-                
+                modeBtn.innerHTML = "Toggle light mode";
             } else {
                 imgElement.src = "images/icon.png";
                 localStorage.setItem("mode", "dark");
-                button.innerHTML = "Toggle Light Mode"
+                modeBtn.innerHTML = "Toggle dark mode";
             }
   }
 
