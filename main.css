@@ -106,7 +106,7 @@ footer {
 
 
 #topBtn {
-    display: none; /* Hidden by default */
+    display: none; 
     right: 30px;
   }
 
@@ -115,7 +115,7 @@ footer {
 }
   
 #topBtn:hover, #modeBtn:hover {
-    background-color: #979797; /* Add a dark-grey background on hover */
+    background-color: #979797; 
 }
 
 #topBtn,#modeBtn {
