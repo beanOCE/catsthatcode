@@ -30,35 +30,38 @@
         <form id="registerForm" action="index.html" novalidate>
             <div>
                 <label for="username">Username:</label>
-                <input type="text" name="user" id="user" required />
+                <input type="text" name="user" id="username" required />
             </div>
             <span id = "newusername_error" class="error"> </span>
             <br>
             <br>
             <div>
                 <label for="email">Email address:</label>
-                <input type="text" name="address" id="address" required />
+                <input type="text" name="address" id="email" required />
             </div>
             <span id = "email_error" class="error"> </span>
             <br>
             <br>
             <div>
                 <label for="password">Password:</label>
-                <input type="password" name="pass" id="pass" minlength="8" required />
+                <input type="password" name="pass" id="password" minlength="8" required />
             </div>
-            <input type="checkbox" onclick="togglePassword()">Show
-            <span id = "newpassword_error" class="error"> </span>
+            <label for="checkbox">Show Password:</label>
+            <input input type="checkbox" onclick="togglePassword()" id="checkbox">
+            <span id="newpassword_error" class="error"></span>
             <br>
             <br>
             <div>
-                <label for="ConfirmPass">Confirm password:</label>
-                <input type="password" name="confirm" id="confirm" minlength="8" required />
+                <label for="confirmPass">Confirm password:</label>
+                <input type="password" name="confirm" id="confirmPass" minlength="8" required />
             </div>
-            <span id = "confpassword_error" class="error"> </span>
+            <span id="confpassword_error" class="error"></span>
             <br>
             <br>
-            <input type="submit" name="Register" value="Register" class = "btn"/>
-            <input type="button" id="reset-btn" class = "btn" name="Reset" value="Reset" />
+            <div class="button-container">
+                <input type="submit" name="Register" value="Register" class="btn" />
+                <input type="button" id="reset-btn" name="Reset" value="Reset" class="btn" />
+            </div>
         </form>
     </div>
 

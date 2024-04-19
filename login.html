@@ -29,23 +29,22 @@
 
     <div id="form" class="center">
         <form id="loginForm" action="index.html" novalidate>
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" name="user" id="user" required />
-            </div>
-            <span id = "username_error" class="error"> </span>
+            <label for="username">Username:</label>
+            <input type="text" name="user" id="username" required />
+            <span id="username_error" class="error"> </span>
             <br>
             <br>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" name="pass" id="pass" minlength="8" required />
-                <input type="checkbox" onclick="togglePassword()">Show
-            </div>
+            <label for="password">Password:</label>
+            <input type="password" name="pass" id="password" minlength="8" required />
             <span id = "password_error" class="error"> </span>
+            <label for="checkbox">Show Password:</label>
+            <input type="checkbox" id = "checkbox" onclick="togglePassword()">
             <br>
             <br>
-            <input type="submit" name="Login" id = "login" class = "btn" value="Login" />
-            <input type="button" value="Register" class = "btn" onclick="window.location.href='register.html'" />
+            <div class="button-container">
+                <input type="submit" value="Login" class="btn" />
+                <input type="button" value="Register" class="btn" onclick="window.location.href='register.html'" />
+            </div>
         </form>
     </div>
 
