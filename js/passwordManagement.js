@@ -82,7 +82,7 @@ window.onload = function () {
                     document.getElementById("confpassword_error").innerHTML = '';
             }
 
-            if (username.trim() != '' && email.trim() != '' && validateEmail(email) && password.trim() != '' && validatePassword(password) && confirmPassword.trim() != ''){
+            if (username.trim() != '' && email.trim() != '' && validateEmail(email) && password.trim() != '' && validatePassword(password) && confirmPassword.trim() != '' && password == confirmPassword){
                 window.location.href = "index.html";
             }
 
