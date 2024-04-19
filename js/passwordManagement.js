@@ -29,10 +29,14 @@ window.onload = function () {
             var passwordRequirements = "Password must be at least 8 characters long and contain at least one number, one capital letter, and one special character.";
             var missingRequirements = "";
 
+            document.getElementById("username").style.border = "none";
+            document.getElementById("email").style.border = "none";
+            document.getElementById("confirmPass").style.border = "none";
 
             if (username.trim() === '') {
                 event.preventDefault();
                 document.getElementById("newusername_error").innerHTML = 'Please enter a username.';
+                document.getElementById("username").style.border = "2px solid red"; 
             } else {
                 event.preventDefault();
                 document.getElementById("newusername_error").innerHTML = '';  
@@ -41,9 +45,11 @@ window.onload = function () {
             if (email.trim() === '') {
                 event.preventDefault();
                 document.getElementById("email_error").innerHTML = 'Please enter an email.';
+                document.getElementById("email").style.border = "2px solid red"; 
             } else if (!validateEmail(email)) {
                 event.preventDefault();
                 document.getElementById("email_error").innerHTML = 'Please enter a valid email address.';
+                document.getElementById("email").style.border = "2px solid red";
             } else {
                 event.preventDefault();
                 document.getElementById("email_error").innerHTML = '';
@@ -52,6 +58,7 @@ window.onload = function () {
             if (password.trim() === '') {
                 event.preventDefault();
                 document.getElementById("newpassword_error").innerHTML = 'Please enter a password.';
+                document.getElementById("password").style.border = "2px solid red"; 
             } else if (!validatePassword(password)) {
                 if (password.length < 8) {
                     missingRequirements += "At least 8 characters, ";
@@ -66,6 +73,7 @@ window.onload = function () {
                     missingRequirements += "At least one special character, ";
                 }
                 document.getElementById("newpassword_error").innerHTML = (passwordRequirements + "\n\nMissing requirements: " + missingRequirements);
+                document.getElementById("password").style.border = "2px solid red";
             } else {
                 event.preventDefault();
                 document.getElementById("newpassword_error").innerHTML = '';
@@ -74,9 +82,11 @@ window.onload = function () {
             if (confirmPassword.trim() === '') {
                 event.preventDefault();
                 document.getElementById("confpassword_error").innerHTML = 'Please confirm password.';
+                document.getElementById("confirmPass").style.border = "2px solid red"; 
             } else if (password !== confirmPassword) {
                 event.preventDefault();
                 document.getElementById("confpassword_error").innerHTML = 'Passwords do not match.';
+                document.getElementById("confirmPass").style.border = "2px solid red"; 
             } else {
                     event.preventDefault();
                     document.getElementById("confpassword_error").innerHTML = '';
@@ -97,6 +107,10 @@ window.onload = function () {
             document.getElementById("email_error").innerHTML = '';
             document.getElementById("newpassword_error").innerHTML = '';
             document.getElementById("confpassword_error").innerHTML = '';
+            document.getElementById("username").style.border = "none";
+            document.getElementById("email").style.border = "none";
+            document.getElementById("password").style.border = "none";
+            document.getElementById("confirmPass").style.border = "none";
         });
     }
 
@@ -111,6 +125,7 @@ window.onload = function () {
             if (username.trim() === '') {
                 event.preventDefault();
                 document.getElementById("username_error").innerHTML = 'Please enter a valid username';
+                document.getElementById("username").style.border = "2px solid red"; 
             } else {
                 event.preventDefault();
                 document.getElementById("username_error").innerHTML = '';
@@ -119,9 +134,10 @@ window.onload = function () {
             if (password.trim() === '') {
                 event.preventDefault();
                 document.getElementById("password_error").innerHTML = 'Please enter a password';
-            } else if (!validatePassword(password)) {
+                document.getElementById("password").style.border = "2px solid red"; 
                 event.preventDefault();
                 document.getElementById("password_error").innerHTML = 'Please enter a valid password';
+                document.getElementById("password").style.border = "2px solid red"; 
             } else {
                 event.preventDefault();
                 document.getElementById("password_error").innerHTML = '';
