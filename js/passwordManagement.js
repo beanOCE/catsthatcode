@@ -121,29 +121,27 @@ window.onload = function () {
 
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
+            document.getElementById("username").style.border = "none";
+            document.getElementById("password").style.border = "none";
 
             if (username.trim() === '') {
-                event.preventDefault();
                 document.getElementById("username_error").innerHTML = 'Please enter a valid username';
                 document.getElementById("username").style.border = "2px solid red"; 
             } else {
-                event.preventDefault();
                 document.getElementById("username_error").innerHTML = '';
             }
             
             if (password.trim() === '') {
-                event.preventDefault();
                 document.getElementById("password_error").innerHTML = 'Please enter a password';
                 document.getElementById("password").style.border = "2px solid red"; 
-                event.preventDefault();
+            } else if (!validatePassword(password)) {
                 document.getElementById("password_error").innerHTML = 'Please enter a valid password';
                 document.getElementById("password").style.border = "2px solid red"; 
             } else {
-                event.preventDefault();
                 document.getElementById("password_error").innerHTML = '';
             }
 
-            if (username.trim() != '' && password.trim != '' && validatePassword(password)) {
+            if (username.trim() !== '' && password.trim() !== '' && validatePassword(password)) {
                 window.location.href = "index.html";
             }
 
