@@ -1,5 +1,5 @@
 function togglePassword() {
-    var passwordInput = document.getElementById("pass");
+    var passwordInput = document.getElementById("password");
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
     } else {
@@ -22,10 +22,10 @@ window.onload = function () {
     if (registrationForm) {
         registrationForm.addEventListener('submit', function (event) {
             event.preventDefault();
-            var username = document.getElementById('user').value;
-            var email = document.getElementById('address').value;
-            var password = document.getElementById('pass').value;
-            var confirmPassword = document.getElementById('confirm').value;
+            var username = document.getElementById('username').value;
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPass').value;
             var passwordRequirements = "Password must be at least 8 characters long and contain at least one number, one capital letter, and one special character.";
             var missingRequirements = "";
 
@@ -89,10 +89,10 @@ window.onload = function () {
         });
 
         document.getElementById('reset-btn').addEventListener('click', function () {
-            document.getElementById('user').value = '';
-            document.getElementById('address').value = '';
-            document.getElementById('pass').value = '';
-            document.getElementById('confirm').value = '';
+            document.getElementById('username').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('confirmPass').value = '';
             document.getElementById("newusername_error").innerHTML = '';
             document.getElementById("email_error").innerHTML = '';
             document.getElementById("newpassword_error").innerHTML = '';
@@ -105,8 +105,8 @@ window.onload = function () {
         loginForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
-            var username = document.getElementById('user').value;
-            var password = document.getElementById('pass').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
             if (username.trim() === '') {
                 event.preventDefault();
